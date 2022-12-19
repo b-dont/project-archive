@@ -1,0 +1,1 @@
+This is an archive of my old projects, available in case it may show useful to someone else. These projects will likely not be worked on by me in the future, and so I've just thrown them all in one git repo.
