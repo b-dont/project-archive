@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row justify-content-md-center">
+		<h1>Contact Brandon</h1>
+	</div>
+	<div class="row justify-content-md-center">
+		<p><small>If you have any business inquiries, please fill out this form and I will respond as soon as possible. Thank you!</small></p>
+	</div>
+	</br>
+	<form action="/contact/" method="post">
+		{% csrf_token %}
+		<div class="row justify-content-md-center">
+			<div class="col-5">
+				{{ form.name }}
+			</div>
+			<div class="col-5">
+				{{ form.email }}
+			</div>
+		</div>
+		</br>
+		<div class="row justify-content-md-center">
+			<div class="col-10">
+				{{ form.subject }}
+			</div>
+		</div>
+		</br>
+		<div class="row justify-content-md-center">
+			<div class="col-10">
+				{{ form.message }}
+			</div>
+		</div>
+		</br>
+		<div class="row justify-content-md-center">
+			<div class="col-10">
+				<button class="btn btn-lg" type="submit"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 20 20">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+</svg> Send Message</button>
+			</div>
+		</div>
+	</form>
+</div>
+		<footer class="bd-footer py-5 mt-5 fixed-bottom" id="footer">
+			<div class="footer-copyright">
+				<p class="text-center"><small>The code of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>
+				It is 
+				<a rel="source-code-link" href="https://github.com/brandontdev/portfolio-site">free and open source software</a> 
+				available under the terms of the 
+				<a rel="code-license-link" href="https://github.com/brandontdev/portfolio-site/blob/main/LICENSE.md">GNU GPL Version 3</a>.
+				</br>
+				The design of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>It is available under the terms of the 
+				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+				Creative Commons Attribution-ShareAlike 4.0 International License
+				</a>
+				</small></p>
+			</div>
+		</footer>
+
+{% endblock %}

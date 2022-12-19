@@ -1,0 +1,70 @@
+html {
+height: 100% !important;
+}
+
+body {
+	background-color: #222831;
+	color: #DDDDDD;
+	min-height: 100% !important;
+}
+
+#body {
+	min-height: 100% !important;
+}
+
+#main-content {
+	min-height: 100% !important;
+}
+
+#footer {
+}
+
+h1 {
+	color: #DDDDDD;
+}
+
+a {
+	color: #94A0AC;
+}
+
+a:hover {
+	color: #DDDDDD;
+}
+
+.p-3 {
+	background-color: #30475E;
+}
+
+.pt-5 {
+	min-height: 100%;
+}
+
+.navbar {
+	background-color: #30475E;
+}
+
+.nav-link {
+	color: #94A0AC;
+}
+
+.form-control {
+	background-color: #30475E;
+	border-color: transparent;
+	transition: none;
+}
+
+.form-control::placeholder {
+	color: #94A0AC;
+}
+
+.form-control:focus {
+	color: white;
+	background-color: #30475E;
+	border-color: transparent;
+	outline: transparent;
+}
+
+.btn, .btn-lg {
+	color: #DDDDDD;
+	background-color: #30475E;
+}

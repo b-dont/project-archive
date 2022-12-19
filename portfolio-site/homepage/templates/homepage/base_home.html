@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Brandon's homepage{% endblock %}
+
+{% block content %}
+	{% if latest_homepage %}
+		<div class="container">
+		{% for homepage in latest_homepage %}
+			<div class="row gy-5 justify-content-md-center">
+				<div class="col-5">
+					<img src="{{ homepage.headshot.url }}" class="img-fluid rounded">
+				</div>
+			</div>
+			</br>
+			<div class="row gy-5 justify-content-md-center">
+				<div class="col-10">
+					<h1 class ="display-1" style="text-align: center">{{ homepage.header }}</h1>
+				</div>
+				<div class="col-7">
+					<p style="text-align: center">{{ homepage.bio }}</p>
+				</div>
+			</div>
+			</br>
+			</br>
+			<div class="row gy-5 my-5 justify-content-md-center">
+				<div class="col-3 d-flex justify-content-center">
+					<button type="button" class="btn btn-lg" onclick="window.location.href='/projects/'">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+  <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+</svg>						
+						My Work</button>
+				</div>
+				<div class="col-3 d-flex justify-content-center">
+					<button type="button" class="btn btn-lg" onclick="window.location.href='/contact/'">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 20 20">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+</svg> 
+						Contact Me</button>
+				</div>
+			<footer class="bd-footer py-5 mt-5 fixed-bottom" id="footer">
+				<div class="footer-copyright">
+					<p class="text-center"><small>The code of this site is Copyright 2021 Brandon T. Phillips. 
+					</br>
+					It is 
+					<a rel="source-code-link" href="https://github.com/brandontdev/portfolio-site">free and open source software</a> 
+					available under the terms of the 
+					<a rel="code-license-link" href="https://github.com/brandontdev/portfolio-site/blob/main/LICENSE.md">GNU GPL Version 3</a>.
+					</br>
+					The design of this site is Copyright 2021 Brandon T. Phillips. 
+					</br>It is available under the terms of the 
+					<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+					Creative Commons Attribution-ShareAlike 4.0 International License
+					</a>
+					</small></p>
+				</div>
+			</footer>
+		</div>
+		{% endfor %}
+	{% endif %}
+{% endblock %}

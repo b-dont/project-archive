@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Success{% endblock %}
+
+{% block content %}
+	<h1>Thank you for reaching out!</h1>
+	<p>You can send another in the <a href="{% url 'contact:contact' %}">contact page</a></p>
+		<footer class="bd-footer py-5 mt-5 fixed-bottom" id="footer">
+			<div class="footer-copyright">
+				<p class="text-center"><small>The code of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>
+				It is 
+				<a rel="source-code-link" href="https://github.com/brandontdev/portfolio-site">free and open source software</a> 
+				available under the terms of the 
+				<a rel="code-license-link" href="https://github.com/brandontdev/portfolio-site/blob/main/LICENSE.md">GNU GPL Version 3</a>.
+				</br>
+				The design of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>It is available under the terms of the 
+				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+				Creative Commons Attribution-ShareAlike 4.0 International License
+				</a>
+				</small></p>
+			</div>
+		</footer>
+
+{% endblock %}

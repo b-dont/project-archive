@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Brandon's Portfolio{% endblock %}
+
+{% block content %}
+	{% if latest_project_list %}
+		<div class="container">
+			<ul>
+			{% for project in latest_project_list %}
+			<div class="row gy-5 justify-content-md-center">
+				<div class="col-9">
+					<div class="p-3">
+						<h1 class="display-5">{{ project.project_name }}</h1>
+						<img src="{{ project.project_screenshot.url }}" class="img-fluid" alt="{{ project.project_name }} screenshot">
+						<div class="row gy-2">
+							<div class="col">
+								</br>
+								<p>{{ project.project_details }}</p>
+							</div>
+						</div>
+							<ul class="nav" id="projects-navbar">
+								<li class="nav-item">
+									<a class="nav-link" href="{{ project.github_link }}">
+									<i class="fab fa-github"></i>
+										GitHub</a>
+								</li>
+								<li class="nav-item">
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{{ project.gitlab_link }}">
+									<i class="fab fa-gitlab"></i>
+										GitLab</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+			</br>
+			{% endfor %}
+			</ul>
+		</div>
+	{% else %}
+		<h2>No projects are available</h2>
+	{% endif %}
+		<footer class="bd-footer py-5 mt-5" id="footer">
+			<div class="footer-copyright">
+				<p class="text-center"><small>The code of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>
+				It is 
+				<a rel="source-code-link" href="https://github.com/brandontdev/portfolio-site">free and open source software</a> 
+				available under the terms of the 
+				<a rel="code-license-link" href="https://github.com/brandontdev/portfolio-site/blob/main/LICENSE.md">GNU GPL Version 3</a>.
+				</br>
+				The design of this site is Copyright 2021 Brandon T. Phillips. 
+				</br>It is available under the terms of the 
+				<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+				Creative Commons Attribution-ShareAlike 4.0 International License
+				</a>
+				</small></p>
+			</div>
+		</footer>
+{% endblock %}
