@@ -3,3 +3,4 @@ portfolio-site/Pipfile
 portfolio-site/Pipfile.lock
 portfolio-site/db.sqlite3
 portfolio-site/media/
+portfolio-site/portfolio/static/fontawesome_free
